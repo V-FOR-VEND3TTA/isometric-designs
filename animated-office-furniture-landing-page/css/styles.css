@@ -1,0 +1,478 @@
+:root {
+            --primary-color: #2a5c8b;
+            --secondary-color: #3ab795;
+            --accent-color: #f9a826;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --gray-color: #e9ecef;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Custom navbar */
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            color: var(--dark-color) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero section */
+        .hero-section {
+            min-height: 90vh;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .hero-content h1 span {
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(249, 168, 38, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+        
+        /* Buttons */
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(42, 92, 139, 0.2);
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #1e4568;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(42, 92, 139, 0.3);
+            color: white;
+        }
+        
+        .btn-accent-custom {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(249, 168, 38, 0.2);
+        }
+        
+        .btn-accent-custom:hover {
+            background-color: #e59400;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(249, 168, 38, 0.3);
+            color: white;
+        }
+        
+        /* Isometric container */
+        .isometric-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        
+        /* Isometric objects */
+        .iso-object {
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .desk {
+            width: 180px;
+            height: 100px;
+            background-color: #8b4513;
+            transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+            top: 150px;
+            left: 50%;
+            margin-left: -90px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .desk::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background-color: #a0522d;
+            bottom: -20px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        .chair {
+            width: 70px;
+            height: 70px;
+            background-color: var(--secondary-color);
+            transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+            top: 230px;
+            left: 40%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chair::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background-color: #2e8b6f;
+            bottom: -20px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        .cabinet {
+            width: 80px;
+            height: 120px;
+            background-color: var(--primary-color);
+            transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+            top: 100px;
+            right: 35%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cabinet::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background-color: #1e4568;
+            bottom: -20px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        .cabinet::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            left: 20px;
+        }
+        
+        .plant {
+            width: 40px;
+            height: 60px;
+            background-color: #3a9d5d;
+            transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+            top: 120px;
+            left: 60%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .plant::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: #2e7d4d;
+            bottom: -10px;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        .lamp {
+            width: 30px;
+            height: 50px;
+            background-color: var(--accent-color);
+            transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+            top: 80px;
+            right: 25%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lamp::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background-color: #e59400;
+            top: -10px;
+            left: -10px;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateY(0);
+            }
+            50% {
+                transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translateY(-10px);
+            }
+        }
+        
+        .desk {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .chair {
+            animation: float 4s ease-in-out infinite 0.5s;
+        }
+        
+        .cabinet {
+            animation: float 4s ease-in-out infinite 1s;
+        }
+        
+        .plant {
+            animation: float 4s ease-in-out infinite 1.5s;
+        }
+        
+        .lamp {
+            animation: float 4s ease-in-out infinite 2s;
+        }
+        
+        /* Features section */
+        .features-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            border-top: 5px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            background-color: rgba(42, 92, 139, 0.1);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .feature-card h4 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Products section */
+        .products-section {
+            padding: 100px 0;
+            background-color: var(--gray-color);
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 220px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-img.desk-img {
+            background-color: #8b4513;
+        }
+        
+        .product-img.chair-img {
+            background-color: var(--secondary-color);
+        }
+        
+        .product-img.cabinet-img {
+            background-color: var(--primary-color);
+        }
+        
+        .product-img.lamp-img {
+            background-color: var(--accent-color);
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h4 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+/* Responsive adjustments */
+@media (max-width: 992px) {
+.hero-content h1 {
+    font-size: 2.8rem;
+}
+            
+.isometric-container {
+        height: 400px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+            .hero-section {
+                padding-top: 80px;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero-content p {
+                max-width: 100%;
+            }
+            
+            .isometric-container {
+                height: 350px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
