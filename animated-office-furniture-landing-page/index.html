@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isometric Office Furniture Store</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chair-office"></i> OfficeStyle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#products" class="btn btn-accent-custom ms-lg-3 mt-3 mt-lg-0">Shop Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Transform Your <span>Workspace</span> with Premium Office Furniture</h1>
+                        <p>Discover ergonomic chairs, modern desks, and functional storage solutions designed to enhance productivity and comfort in your office environment.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#products" class="btn btn-primary-custom">Explore Products</a>
+                            <a href="#features" class="btn btn-accent-custom">Why Choose Us</a>
+                        </div>
+                        
+                        <div class="mt-5 pt-4">
+                            <div class="row">
+                                <div class="col-4">
+                                    <h3 class="text-primary">500+</h3>
+                                    <p>Products</p>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-primary">10K+</h3>
+                                    <p>Happy Customers</p>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="text-primary">15+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="isometric-container">
+                        <div class="iso-object desk"></div>
+                        <div class="iso-object chair"></div>
+                        <div class="iso-object cabinet"></div>
+                        <div class="iso-object plant"></div>
+                        <div class="iso-object lamp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Furniture</h2>
+                <p>We provide high-quality office furniture designed for comfort, productivity, and style.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Eco-Friendly Materials</h4>
+                        <p>All our furniture is made from sustainable, environmentally friendly materials.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>5-Year Warranty</h4>
+                        <p>We stand behind our products with a comprehensive 5-year warranty.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-truck"></i>
+                        <h4>Free Shipping</h4>
+                        <p>Free delivery and assembly for all orders above $499.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-couch"></i>
+                        <h4>Ergonomic Design</h4>
+                        <p>Designed with ergonomics in mind to support your health and productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Discover our best-selling office furniture items</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img desk-img"></div>
+                        <div class="product-content">
+                            <h4>Executive Desk</h4>
+                            <p class="text-muted">Spacious workstation with built-in cable management</p>
+                            <div class="price">$599.99</div>
+                            <button class="btn btn-primary-custom w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img chair-img"></div>
+                        <div class="product-content">
+                            <h4>Ergonomic Chair</h4>
+                            <p class="text-muted">Adjustable lumbar support and breathable mesh</p>
+                            <div class="price">$349.99</div>
+                            <button class="btn btn-primary-custom w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img cabinet-img"></div>
+                        <div class="product-content">
+                            <h4>Storage Cabinet</h4>
+                            <p class="text-muted">Modern filing cabinet with secure locking system</p>
+                            <div class="price">$279.99</div>
+                            <button class="btn btn-primary-custom w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img lamp-img"></div>
+                        <div class="product-content">
+                            <h4>LED Desk Lamp</h4>
+                            <p class="text-muted">Adjustable brightness with multiple color temperatures</p>
+                            <div class="price">$89.99</div>
+                            <button class="btn btn-primary-custom w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h5>OfficeStyle</h5>
+                    <p class="mt-3">Providing premium office furniture solutions since 2008. We're committed to creating workspaces that inspire productivity and comfort.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5>Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Office Desks</a></li>
+                        <li><a href="#">Ergonomic Chairs</a></li>
+                        <li><a href="#">Storage Solutions</a></li>
+                        <li><a href="#">Meeting Room Furniture</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Design Street, City</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@officestyle.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 OfficeStyle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Custom Scripts-->
+    <script src="js/script.js"></script>
+</body>
+</html>
